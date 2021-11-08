@@ -38,7 +38,7 @@ def home_page(request):
         file_url = fs.url(filename)
         cropping(file_url)
 
-        return render(request, 'index.html', {
+        return render(request, 'crop/page.html', {
             'file_url': file_url[:-3]+"png"
         })
-    return render(request, 'index.html')
+    return render(request, 'crop/index.html')

@@ -1,0 +1,9 @@
+{% extends "crop/index.html" %}
+{% block download %}
+    <div>
+        <img src="{{ file_url }}" alt="">
+    </div>
+    <div>
+        <a href="{{ file_url }}" class="gradient-button" download="">Download</a>
+    </div>
+{% endblock %}
