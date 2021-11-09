@@ -21,7 +21,10 @@ def cropping(file_url):
     f = np.fromfile(output_path+"png")
     result = remove(f)
     img = Image.open(io.BytesIO(result)).convert("RGBA")
-    img.save(output_path+"png")
+    res_img = Image.new("RGB", (img.size[0], img.size[1]), (255, 255, 255))
+    res_img.paste(img, (0, 0), img)
+    res_img.save(io.BytesIO(), 'PNG')
+    res_img.save(output_path+"png")
 
     try:
         os.remove(input_path)

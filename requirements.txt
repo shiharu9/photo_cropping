@@ -1,0 +1,4 @@
+django>=3.2.9
+rembg>=1.0.27
+numpy>=1.21.4
+image>=1.5.33
